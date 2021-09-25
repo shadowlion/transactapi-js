@@ -1,1 +1,1 @@
-export { default as add } from "./add/index";
+export { default as getAccount } from "./getAccount/index";
