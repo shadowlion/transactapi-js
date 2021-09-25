@@ -15,6 +15,7 @@ pnpm add transactapi-js
 ## Usage
 
 ```javascript
+// Javascript, ES6
 import getAccount from "transactapi-js/getAccount";
 
 (async () => {
@@ -30,6 +31,7 @@ import getAccount from "transactapi-js/getAccount";
 ```
 
 ```typescript
+// Typescript
 import getAccount, { GetAccountPayload } from "transactapi-js/getAccount";
 
 (async () => {
