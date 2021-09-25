@@ -2,6 +2,7 @@
   "name": "transactapi-js",
   "version": "0.0.3",
   "description": "Javascript SDK for Transact API services.",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -12,19 +13,23 @@
     "clean": "rm -rf dist",
     "start": "ts-node src/index.ts",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.21.4"
   },
   "devDependencies": {
+    "@types/jest": "^27.0.2",
     "@types/node": "^16.10.1",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
     "eslint": "^7.32.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.2",
+    "jest": "^27.2.2",
     "prettier": "^2.4.1",
+    "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
