@@ -1,7 +1,7 @@
 {
-  "name": "setup-ts-template",
-  "version": "1.1.0",
-  "description": "An opinionated template for setting up a Typescript project.",
+  "name": "transactapi-js",
+  "version": "0.0.1",
+  "description": "Javascript SDK for Transact API services.",
   "main": "index.js",
   "scripts": {
     "build": "pnpx tsc",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shadowlion/setup-ts-template.git"
+    "url": "git+https://github.com/shadowlion/transactapi-js.git"
   },
   "keywords": [
     "typescript"
@@ -32,7 +32,7 @@
   "author": "Justin Chiou <chiou.kai@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shadowlion/setup-ts-template/issues"
+    "url": "https://github.com/shadowlion/transactapi-js/issues"
   },
-  "homepage": "https://github.com/shadowlion/setup-ts-template#readme"
+  "homepage": "https://github.com/shadowlion/transactapi-js#readme"
 }
