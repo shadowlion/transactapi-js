@@ -13,3 +13,37 @@ pnpm add transactapi-js
 ```
 
 ## Usage
+
+```javascript
+import getAccount from "transactapi-js/getAccount";
+
+(async () => {
+    const payload = {
+        clientID: "",
+        developerAPIKey: "",
+        accountId: "",
+    };
+    const account = await getAccount(payload);
+    const name = account.accountName;
+    console.log(name);
+});
+```
+
+```typescript
+import getAccount, { GetAccountPayload } from "transactapi-js/getAccount";
+
+(async () => {
+    const payload: GetAccountPayload = {
+        clientID: "",
+        developerAPIKey: "",
+        accountId: "",
+    };
+    const account = await getAccount(payload);
+    const name = account.accountName;
+    console.log(name);
+})();
+```
+
+## How to Contribute
+
+## License
