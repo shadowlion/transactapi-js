@@ -15,6 +15,24 @@ pnpm add transactapi-js
 ## Usage
 
 ```javascript
+// Javascript, CJS
+const transactapi = require("transactapi-js");
+
+(function () {
+    const getAccount = transactapi.getAccount;
+    const payload = {
+        clientID: "",
+        developerAPIKey: "",
+        accountId: "",
+    };
+    getAccount(payload).then((account) => {
+        const name = account.accountName;
+        console.log(name);
+    });
+})();
+```
+
+```javascript
 // Javascript, ES6
 import getAccount from "transactapi-js/getAccount";
 
