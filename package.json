@@ -1,6 +1,6 @@
 {
-  "name": "transactapi-js",
-  "version": "0.0.10",
+  "name": "@shadowlion/transactapi-js",
+  "version": "0.0.11",
   "description": "Javascript SDK for Transact API services.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shadowlion/transactapi-js.git"
+    "url": "https://github.com/shadowlion/transactapi-js.git"
   },
   "keywords": [
     "typescript"
@@ -46,6 +46,6 @@
   },
   "homepage": "https://github.com/shadowlion/transactapi-js#readme",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/shadowlion"
   }
 }
