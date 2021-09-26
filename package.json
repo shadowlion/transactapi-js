@@ -46,6 +46,6 @@
   },
   "homepage": "https://github.com/shadowlion/transactapi-js#readme",
   "publishConfig": {
-    "@shadowlion:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
