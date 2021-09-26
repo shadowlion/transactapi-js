@@ -1,6 +1,6 @@
 {
   "name": "transactapi-js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Javascript SDK for Transact API services.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
