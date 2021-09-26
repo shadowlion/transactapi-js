@@ -1,5 +1,5 @@
 {
-  "name": "@shadowlion/transactapi-js",
+  "name": "transactapi-js",
   "version": "0.0.11",
   "description": "Javascript SDK for Transact API services.",
   "main": "dist/index.js",
