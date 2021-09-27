@@ -1,5 +1,6 @@
 import axios from "axios";
-import getAccount, { GetAccountPayload, GetAccountResponse } from ".";
+import getAccount from ".";
+import { GetAccountPayload, GetAccountResponse } from "./types";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
