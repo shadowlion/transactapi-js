@@ -16,7 +16,7 @@ export interface BaseResponse {
  * @param payload Object of parameters, referenced from documentation
  * @returns JSON response
  */
-export async function callApi<Payload, Response>(
+export async function baseApi<Payload, Response>(
   endpoint: string,
   payload: Payload,
 ): Promise<Response> {

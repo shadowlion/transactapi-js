@@ -1,4 +1,4 @@
-import { callApi } from "../base";
+import { baseApi } from "../base";
 import { GetAccountPayload, GetAccountResponse } from "./types";
 
 /**
@@ -22,7 +22,7 @@ export default async function ({
       developerAPIKey,
       accountId,
     };
-    return await callApi("getAccount", payload);
+    return await baseApi("getAccount", payload);
   } catch (error) {
     throw new Error(error.message);
   }

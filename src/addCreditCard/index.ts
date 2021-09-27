@@ -1,4 +1,4 @@
-import { callApi } from "../base";
+import { baseApi } from "../base";
 import { AddCreditCardPayload, AddCreditCardResponse } from "./types";
 
 /**
@@ -39,7 +39,7 @@ export default async function ({
       cardType,
       createdIpAddress: "69.61.177.110",
     };
-    return await callApi("addCreditCard", payload);
+    return await baseApi("addCreditCard", payload);
   } catch (error) {
     throw new Error(error.message);
   }

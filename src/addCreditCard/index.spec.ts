@@ -7,7 +7,7 @@ jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("/getAccount", () => {
-  test("account exists", async () => {
+  test("credit card creation successful", async () => {
     const payload: AddCreditCardPayload = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
@@ -28,11 +28,49 @@ describe("/getAccount", () => {
     expect(mockedResponse).toEqual(response);
   });
 
+  test("invalid base credentials", async () => {
+    const payload: AddCreditCardPayload = {
+      clientID: "",
+      developerAPIKey: "somedeveloperkey",
+      accountId: "AXXXXX",
+      creditCardName: "somebank",
+      creditCardNumber: "4242424242424242",
+      expirationDate: "1212",
+      cvvNumber: "123",
+      cardType: CreditCardType.VISA,
+    };
+    const response: AddCreditCardResponse = {
+      statusCode: "103",
+      statusDesc: "Invalid Developer Key/Client ID OR Developer Key not Active",
+    };
+    mockedAxios.post.mockResolvedValue({ data: response });
+    const mockedResponse = await addCreditCard(payload);
+    expect(mockedResponse).toEqual(response);
+
+    const payload2: AddCreditCardPayload = {
+      clientID: "someclientid",
+      developerAPIKey: "",
+      accountId: "AXXXXX",
+      creditCardName: "somebank",
+      creditCardNumber: "4242424242424242",
+      expirationDate: "1212",
+      cvvNumber: "123",
+      cardType: CreditCardType.VISA,
+    };
+    const response2: AddCreditCardResponse = {
+      statusCode: "103",
+      statusDesc: "Invalid Developer Key/Client ID OR Developer Key not Active",
+    };
+    mockedAxios.post.mockResolvedValue({ data: response2 });
+    const mockedResponse2 = await addCreditCard(payload2);
+    expect(mockedResponse2).toEqual(response2);
+  });
+
   test("account not found", async () => {
     const payload: AddCreditCardPayload = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
-      accountId: "AXXXXX",
+      accountId: "",
       creditCardName: "somebank",
       creditCardNumber: "4242424242424242",
       expirationDate: "1212",
@@ -47,6 +85,4 @@ describe("/getAccount", () => {
     const mockedResponse = await addCreditCard(payload);
     expect(mockedResponse).toEqual(response);
   });
-
-  // TODO: mock responses for invalid credit card credentials
 });

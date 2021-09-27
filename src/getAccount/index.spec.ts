@@ -9,7 +9,7 @@ describe("/getAccount", () => {
   test("account exists", async () => {
     const payload: GetAccountPayload = {
       clientID: "someclientid",
-      developerAPIKey: "somedeveloperapikey",
+      developerAPIKey: "somedeveloperkey",
       accountId: "AXXXXX",
     };
     const response: GetAccountResponse = {
@@ -56,15 +56,43 @@ describe("/getAccount", () => {
     };
     mockedAxios.post.mockResolvedValue({ data: response });
     const mockedResponse = await getAccount(payload);
-
     expect(mockedResponse).toEqual(response);
+  });
+
+  test("invalid base credentials", async () => {
+    const payload: GetAccountPayload = {
+      clientID: "",
+      developerAPIKey: "somedeveloperkey",
+      accountId: "AXXXXX",
+    };
+    const response: GetAccountResponse = {
+      statusCode: "103",
+      statusDesc: "Invalid Developer Key/Client ID OR Developer Key not Active",
+    };
+
+    mockedAxios.post.mockResolvedValue({ data: response });
+    const mockedResponse = await getAccount(payload);
+    expect(mockedResponse).toEqual(response);
+
+    const payload2: GetAccountPayload = {
+      clientID: "someclientid",
+      developerAPIKey: "",
+      accountId: "AXXXXX",
+    };
+    const response2: GetAccountResponse = {
+      statusCode: "103",
+      statusDesc: "Invalid Developer Key/Client ID OR Developer Key not Active",
+    };
+    mockedAxios.post.mockResolvedValue({ data: response2 });
+    const mockedResponse2 = await getAccount(payload2);
+    expect(mockedResponse2).toEqual(response2);
   });
 
   test("account not found", async () => {
     const payload: GetAccountPayload = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperapikey",
-      accountId: "AXXXXX",
+      accountId: "",
     };
     const response: GetAccountResponse = {
       statusCode: "148",
