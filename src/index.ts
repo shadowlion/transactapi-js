@@ -1,3 +1,6 @@
-export { default as addCreditCard } from "./addCreditCard/index";
-export { default as ccFundMove } from "./ccFundMove/index";
-export { default as getAccount } from "./getAccount/index";
+export { default as addCreditCard } from "./addCreditCard";
+export { default as ccFundMove } from "./ccFundMove";
+export { default as createExternalAccount } from "./createExternalAccount";
+export { default as createTrade } from "./createTrade";
+export { default as externalFundMove } from "./externalFundMove";
+export { default as getAccount } from "./getAccount";
