@@ -14,7 +14,7 @@ export interface ExternalFundMovePayload {
 export interface ExternalFundMoveResponse {
   statusCode: string;
   statusDesc: string;
-  TradeFinancialDetails: TradeFinancialDetail[];
+  TradeFinancialDetails?: TradeFinancialDetail[];
 }
 
 export interface TradeFinancialDetail {

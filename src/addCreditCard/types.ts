@@ -1,7 +1,8 @@
-import { BasePayload, BaseResponse } from "../base";
 import { CreditCardType } from "./enums";
 
-export interface AddCreditCardPayload extends BasePayload {
+export interface AddCreditCardPayload {
+  clientID: string;
+  developerAPIKey: string;
   accountId: string;
   creditCardName: string;
   creditCardNumber: string;
@@ -11,6 +12,8 @@ export interface AddCreditCardPayload extends BasePayload {
   createdIpAddress?: string;
 }
 
-export interface AddCreditCardResponse extends BaseResponse {
+export interface AddCreditCardResponse {
+  statusCode: string;
+  statusDesc: string;
   creditcardDetails?: string;
 }

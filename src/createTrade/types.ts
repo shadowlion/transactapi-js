@@ -12,7 +12,7 @@ export interface CreateTradePayload {
 export interface CreateTradeResponse {
   statusCode: string;
   statusDesc: string;
-  purchaseDetails: [true, PurchaseDetail[]];
+  purchaseDetails?: [true, PurchaseDetail[]];
 }
 
 export interface PurchaseDetail {

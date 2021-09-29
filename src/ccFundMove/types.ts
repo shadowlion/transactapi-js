@@ -1,12 +1,14 @@
-import { BasePayload, BaseResponse } from "../base";
-
-export interface CcFundMovePayload extends BasePayload {
+export interface CcFundMovePayload {
+  clientID: string;
+  developerAPIKey: string;
   accountId: string;
   tradeId: string;
   createdIpAddress?: "69.61.177.110";
 }
 
-export interface CcFundMoveResponse extends BaseResponse {
+export interface CcFundMoveResponse {
+  statusCode: string;
+  statusDesc: string;
   transactionDetails?: TransactionDetails;
 }
 

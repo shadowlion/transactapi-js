@@ -16,7 +16,7 @@ export interface CreateExternalAccountPayload {
 export interface CreateExternalAccountResponse {
   statusCode: string;
   statusDesc: string;
-  "External Account Details": [true, ExternalAccountDetail[]];
+  "External Account Details"?: [true, ExternalAccountDetail[]];
 }
 
 export interface ExternalAccountDetail {
