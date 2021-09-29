@@ -1,15 +1,5 @@
 import axios, { AxiosResponse } from "axios";
 
-export interface BasePayload {
-  clientID: string;
-  developerAPIKey: string;
-}
-
-export interface BaseResponse {
-  statusCode: string;
-  statusDesc: string;
-}
-
 /**
  * Base API call to Transact API
  * @param endpoint API endpoint, referenced from documentation
