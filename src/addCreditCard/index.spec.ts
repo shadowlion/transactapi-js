@@ -1,14 +1,14 @@
 import axios from "axios";
 import addCreditCard from ".";
 import { CreditCardType } from "./enums";
-import { AddCreditCardPayload, AddCreditCardResponse } from "./types";
+import { AddCreditCardRequest, AddCreditCardResponse } from "./types";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("/getAccount", () => {
   test("credit card creation successful", async () => {
-    const payload: AddCreditCardPayload = {
+    const payload: AddCreditCardRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
       accountId: "AXXXXX",
@@ -29,7 +29,7 @@ describe("/getAccount", () => {
   });
 
   test("invalid base credentials", async () => {
-    const payload: AddCreditCardPayload = {
+    const payload: AddCreditCardRequest = {
       clientID: "",
       developerAPIKey: "somedeveloperkey",
       accountId: "AXXXXX",
@@ -47,7 +47,7 @@ describe("/getAccount", () => {
     const mockedResponse = await addCreditCard(payload);
     expect(mockedResponse).toEqual(response);
 
-    const payload2: AddCreditCardPayload = {
+    const payload2: AddCreditCardRequest = {
       clientID: "someclientid",
       developerAPIKey: "",
       accountId: "AXXXXX",
@@ -67,7 +67,7 @@ describe("/getAccount", () => {
   });
 
   test("account not found", async () => {
-    const payload: AddCreditCardPayload = {
+    const payload: AddCreditCardRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
       accountId: "",

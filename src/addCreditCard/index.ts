@@ -1,5 +1,5 @@
 import { baseApi } from "../base";
-import { AddCreditCardPayload, AddCreditCardResponse } from "./types";
+import { AddCreditCardRequest, AddCreditCardResponse } from "./types";
 
 /**
  * This method is used to save a credit card to an Account (createAccount).
@@ -26,9 +26,9 @@ export default async function ({
   expirationDate,
   cvvNumber,
   cardType,
-}: AddCreditCardPayload): Promise<AddCreditCardResponse> {
+}: AddCreditCardRequest): Promise<AddCreditCardResponse> {
   try {
-    const payload: AddCreditCardPayload = {
+    const payload: AddCreditCardRequest = {
       clientID,
       developerAPIKey,
       accountId,

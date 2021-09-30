@@ -1,6 +1,6 @@
 import { CreditCardType } from "./enums";
 
-export interface AddCreditCardPayload {
+export interface AddCreditCardRequest {
   clientID: string;
   developerAPIKey: string;
   accountId: string;
