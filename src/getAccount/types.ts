@@ -1,4 +1,4 @@
-export interface GetAccountPayload {
+export interface GetAccountRequest {
   clientID: string;
   developerAPIKey: string;
   accountId: string;

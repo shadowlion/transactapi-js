@@ -1,13 +1,13 @@
 import axios from "axios";
 import getAccount from ".";
-import { GetAccountPayload, GetAccountResponse } from "./types";
+import { GetAccountRequest, GetAccountResponse } from "./types";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
-describe("/getAccount", () => {
+describe("/getAccount endpoint", () => {
   test("account exists", async () => {
-    const payload: GetAccountPayload = {
+    const payload: GetAccountRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
       accountId: "AXXXXX",
@@ -60,7 +60,7 @@ describe("/getAccount", () => {
   });
 
   test("invalid base credentials", async () => {
-    const payload: GetAccountPayload = {
+    const payload: GetAccountRequest = {
       clientID: "",
       developerAPIKey: "somedeveloperkey",
       accountId: "AXXXXX",
@@ -74,7 +74,7 @@ describe("/getAccount", () => {
     const mockedResponse = await getAccount(payload);
     expect(mockedResponse).toEqual(response);
 
-    const payload2: GetAccountPayload = {
+    const payload2: GetAccountRequest = {
       clientID: "someclientid",
       developerAPIKey: "",
       accountId: "AXXXXX",
@@ -89,7 +89,7 @@ describe("/getAccount", () => {
   });
 
   test("account not found", async () => {
-    const payload: GetAccountPayload = {
+    const payload: GetAccountRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperapikey",
       accountId: "",

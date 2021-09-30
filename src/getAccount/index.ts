@@ -1,5 +1,5 @@
 import { baseApi } from "../base";
-import { GetAccountPayload, GetAccountResponse } from "./types";
+import { GetAccountRequest, GetAccountResponse } from "./types";
 
 /**
  * This method is used to get all information for an account (createAccount).
@@ -15,9 +15,9 @@ export default async function ({
   clientID,
   developerAPIKey,
   accountId,
-}: GetAccountPayload): Promise<GetAccountResponse> {
+}: GetAccountRequest): Promise<GetAccountResponse> {
   try {
-    const payload: GetAccountPayload = {
+    const payload: GetAccountRequest = {
       clientID,
       developerAPIKey,
       accountId,
