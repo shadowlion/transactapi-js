@@ -1,4 +1,4 @@
-export interface CcFundMovePayload {
+export interface CcFundMoveRequest {
   clientID: string;
   developerAPIKey: string;
   accountId: string;

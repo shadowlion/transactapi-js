@@ -1,13 +1,13 @@
 import axios from "axios";
 import ccFundMove from ".";
-import { CcFundMovePayload, CcFundMoveResponse } from "./types";
+import { CcFundMoveRequest, CcFundMoveResponse } from "./types";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("/ccFundMove", () => {
   test("account exists", async () => {
-    const payload: CcFundMovePayload = {
+    const payload: CcFundMoveRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperapikey",
       accountId: "AXXXXX",
@@ -32,7 +32,7 @@ describe("/ccFundMove", () => {
   });
 
   test("invalid base credentials", async () => {
-    const payload: CcFundMovePayload = {
+    const payload: CcFundMoveRequest = {
       clientID: "",
       developerAPIKey: "somedeveloperkey",
       accountId: "AXXXXX",
@@ -47,7 +47,7 @@ describe("/ccFundMove", () => {
     const mockedResponse = await ccFundMove(payload);
     expect(mockedResponse).toEqual(response);
 
-    const payload2: CcFundMovePayload = {
+    const payload2: CcFundMoveRequest = {
       clientID: "someclientid",
       developerAPIKey: "",
       accountId: "AXXXXX",
@@ -63,7 +63,7 @@ describe("/ccFundMove", () => {
   })
 
   test("account not found", async () => {
-    const payload = {
+    const payload: CcFundMoveRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperapikey",
       accountId: "",
@@ -79,7 +79,7 @@ describe("/ccFundMove", () => {
   });
 
   test("trade not found", async () => {
-    const payload = {
+    const payload: CcFundMoveRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperapikey",
       accountId: "AXXXXX",

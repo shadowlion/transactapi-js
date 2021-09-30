@@ -1,5 +1,5 @@
 import { baseApi } from "../base";
-import { CcFundMovePayload, CcFundMoveResponse } from "./types";
+import { CcFundMoveRequest, CcFundMoveResponse } from "./types";
 
 /**
  * This method is used to get all information for an account (createAccount).
@@ -17,9 +17,9 @@ export default async function ({
   developerAPIKey,
   accountId,
   tradeId,
-}: CcFundMovePayload): Promise<CcFundMoveResponse> {
+}: CcFundMoveRequest): Promise<CcFundMoveResponse> {
   try {
-    const payload: CcFundMovePayload = {
+    const payload: CcFundMoveRequest = {
       clientID,
       developerAPIKey,
       accountId,
