@@ -12,7 +12,7 @@ For those who wish to help during Hacktoberfest (or any time else!), please subm
 
 ## Setup
 
-You will need to acquire both a `clientId` and `developerAPIKey` from NCPS - this happens when you subscribe to them as a custom of their services.
+You will need to acquire both a `clientID` and `developerAPIKey` from NCPS - this happens when you subscribe to them as a customer of their services.
 
 Each API endpoint will require both in order to get the response to fully work.
 
