@@ -1,13 +1,13 @@
 import axios from "axios";
 import createTrade from ".";
-import { CreateTradePayload, CreateTradeResponse } from "./types";
+import { CreateTradeRequest, CreateTradeResponse } from "./types";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("/createTrade endpoint", () => {
   test("trade creation successful", async () => {
-    const payload: CreateTradePayload = {
+    const payload: CreateTradeRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
       offeringId: "12345",

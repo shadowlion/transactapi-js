@@ -1,6 +1,6 @@
 import { baseApi } from "../base";
 import {
-  CreateExternalAccountPayload,
+  CreateExternalAccountRequest,
   CreateExternalAccountResponse,
 } from "./types";
 
@@ -35,9 +35,9 @@ export default async function ({
   ExtRoutingnumber,
   ExtAccountnumber,
   accountType,
-}: CreateExternalAccountPayload): Promise<CreateExternalAccountResponse> {
+}: CreateExternalAccountRequest): Promise<CreateExternalAccountResponse> {
   try {
-    const payload: CreateExternalAccountPayload = {
+    const payload: CreateExternalAccountRequest = {
       clientID,
       developerAPIKey,
       types,

@@ -1,6 +1,6 @@
 export type TransactionType = "ACH" | "WIRE" | "CHECK" | "CREDITCARD";
 
-export interface CreateTradePayload {
+export interface CreateTradeRequest {
   clientID: string;
   developerAPIKey: string;
   offeringId: string;

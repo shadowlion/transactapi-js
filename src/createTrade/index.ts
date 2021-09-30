@@ -1,5 +1,5 @@
 import { baseApi } from "../base";
-import { CreateTradePayload, CreateTradeResponse } from "./types";
+import { CreateTradeRequest, CreateTradeResponse } from "./types";
 
 /**
  * This method is used to create a trade/investment for an offering. This requires Account ID and total number of units/shares to be purchased by the account. Creating a trade represents the intention to invest and does NOT initiate any sort of fund move. To initiate an ACH transfer for a trade, you will need to use the externalFundMove method.
@@ -25,9 +25,9 @@ export default async function ({
   offeringId,
   transactionType,
   transactionUnits,
-}: CreateTradePayload): Promise<CreateTradeResponse> {
+}: CreateTradeRequest): Promise<CreateTradeResponse> {
   try {
-    const payload: CreateTradePayload = {
+    const payload: CreateTradeRequest = {
       clientID,
       developerAPIKey,
       accountId,

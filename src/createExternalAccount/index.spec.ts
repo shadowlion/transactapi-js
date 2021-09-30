@@ -2,7 +2,7 @@ import axios from "axios";
 import createExternalAccount from ".";
 import { AccountDescription, AccountType } from "./enums";
 import {
-  CreateExternalAccountPayload,
+  CreateExternalAccountRequest,
   CreateExternalAccountResponse,
 } from "./types";
 
@@ -11,7 +11,7 @@ const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("/createExternalAccount endpoint", () => {
   test("successful creation of external account", async () => {
-    const payload: CreateExternalAccountPayload = {
+    const payload: CreateExternalAccountRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
       types: AccountDescription.ACCOUNT,

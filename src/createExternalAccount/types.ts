@@ -1,6 +1,6 @@
 import { AccountDescription, AccountType } from "./enums";
 
-export interface CreateExternalAccountPayload {
+export interface CreateExternalAccountRequest {
   clientID: string;
   developerAPIKey: string;
   types: AccountDescription;
