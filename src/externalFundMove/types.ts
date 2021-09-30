@@ -1,4 +1,4 @@
-export interface ExternalFundMovePayload {
+export interface ExternalFundMoveRequest {
   clientID: string;
   developerAPIKey: string;
   accountId: string;

@@ -1,5 +1,5 @@
 import { baseApi } from "../base";
-import { ExternalFundMovePayload, ExternalFundMoveResponse } from "./types";
+import { ExternalFundMoveRequest, ExternalFundMoveResponse } from "./types";
 
 /**
  * TThis method is used to move funds from external bank account to the NCPS escrow account. Transactions are batch processed each business day at 6pm ET. The amount is limited to $100,000.00.
@@ -32,9 +32,9 @@ export default async function ({
   amount,
   description,
   checkNumber,
-}: ExternalFundMovePayload): Promise<ExternalFundMoveResponse> {
+}: ExternalFundMoveRequest): Promise<ExternalFundMoveResponse> {
   try {
-    const payload: ExternalFundMovePayload = {
+    const payload: ExternalFundMoveRequest = {
       clientID,
       developerAPIKey,
       accountId,

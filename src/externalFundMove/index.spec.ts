@@ -1,13 +1,13 @@
 import axios from "axios";
 import externalFundMove from ".";
-import { ExternalFundMovePayload, ExternalFundMoveResponse } from "./types";
+import { ExternalFundMoveRequest, ExternalFundMoveResponse } from "./types";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("/externalFundMove endpoint", () => {
   test("trade creation successful", async () => {
-    const payload: ExternalFundMovePayload = {
+    const payload: ExternalFundMoveRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
       accountId: "985742",
