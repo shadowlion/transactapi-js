@@ -13,7 +13,7 @@ describe("/createTrade endpoint", () => {
       offeringId: "12345",
       accountId: "A12345",
       transactionType: "CREDITCARD",
-      transactionUnits: 100
+      transactionUnits: 100,
     };
     const response: CreateTradeResponse = {
       statusCode: "101",

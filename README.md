@@ -31,16 +31,16 @@ pnpm add transactapi-js
 const transactapi = require("transactapi-js");
 
 (function () {
-    const getAccount = transactapi.getAccount;
-    const payload = {
-        clientID: "",
-        developerAPIKey: "",
-        accountId: "",
-    };
-    getAccount(payload).then((account) => {
-        const name = account.accountName;
-        console.log(name);
-    });
+  const getAccount = transactapi.getAccount;
+  const payload = {
+    clientID: "",
+    developerAPIKey: "",
+    accountId: "",
+  };
+  getAccount(payload).then((account) => {
+    const name = account.accountName;
+    console.log(name);
+  });
 })();
 ```
 
@@ -48,16 +48,16 @@ const transactapi = require("transactapi-js");
 // Javascript, ES6
 import getAccount from "transactapi-js/getAccount";
 
-(async () => {
-    const payload = {
-        clientID: "",
-        developerAPIKey: "",
-        accountId: "",
-    };
-    const account = await getAccount(payload);
-    const name = account.accountName;
-    console.log(name);
-});
+async () => {
+  const payload = {
+    clientID: "",
+    developerAPIKey: "",
+    accountId: "",
+  };
+  const account = await getAccount(payload);
+  const name = account.accountName;
+  console.log(name);
+};
 ```
 
 ```typescript
@@ -65,14 +65,14 @@ import getAccount from "transactapi-js/getAccount";
 import getAccount, { GetAccountPayload } from "transactapi-js/getAccount";
 
 (async () => {
-    const payload: GetAccountPayload = {
-        clientID: "",
-        developerAPIKey: "",
-        accountId: "",
-    };
-    const account = await getAccount(payload);
-    const name = account.accountName;
-    console.log(name);
+  const payload: GetAccountPayload = {
+    clientID: "",
+    developerAPIKey: "",
+    accountId: "",
+  };
+  const account = await getAccount(payload);
+  const name = account.accountName;
+  console.log(name);
 })();
 ```
 
@@ -86,10 +86,10 @@ Take a look at the [documentation](transactapi-docs), find which endpoint hasn't
 
 3. Create a folder in `/src` with the name of the `ENDPOINT`. Create the following files:
 
-    - `/src/ENDPOINT/index.ts` - function file to call the api endpoint
-    - `/src/ENDPOINT/index.spec.ts` - test file to mock the api calls
-    - `/src/ENDPOINT/types.ts` - types file just for this specific endpoint
-    - `/src/ENDPOINT/enums.ts` - enums file (optional)
+   - `/src/ENDPOINT/index.ts` - function file to call the api endpoint
+   - `/src/ENDPOINT/index.spec.ts` - test file to mock the api calls
+   - `/src/ENDPOINT/types.ts` - types file just for this specific endpoint
+   - `/src/ENDPOINT/enums.ts` - enums file (optional)
 
 [ncps]: https://www.northcapital.com/
 [transactapi-docs]: https://api.norcapsecurities.com/admin_v3/documentation

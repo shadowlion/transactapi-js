@@ -1,6 +1,6 @@
 export enum AccountDescription {
-	ACCOUNT = "Account",
-	ISSUER = "Issuer",
+  ACCOUNT = "Account",
+  ISSUER = "Issuer",
 }
 
 export enum AccountType {

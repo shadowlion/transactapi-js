@@ -36,7 +36,7 @@ describe("/ccFundMove", () => {
       clientID: "",
       developerAPIKey: "somedeveloperkey",
       accountId: "AXXXXX",
-      tradeId: "1234567"
+      tradeId: "1234567",
     };
     const response: CcFundMoveResponse = {
       statusCode: "103",
@@ -51,7 +51,7 @@ describe("/ccFundMove", () => {
       clientID: "someclientid",
       developerAPIKey: "",
       accountId: "AXXXXX",
-      tradeId: "1234567"
+      tradeId: "1234567",
     };
     const response2: CcFundMoveResponse = {
       statusCode: "103",
@@ -60,7 +60,7 @@ describe("/ccFundMove", () => {
     mockedAxios.post.mockResolvedValue({ data: response2 });
     const mockedResponse2 = await ccFundMove(payload2);
     expect(mockedResponse2).toEqual(response2);
-  })
+  });
 
   test("account not found", async () => {
     const payload: CcFundMoveRequest = {
