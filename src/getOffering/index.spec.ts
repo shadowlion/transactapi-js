@@ -1,5 +1,5 @@
 import axios from "axios";
-import getAllTrades from ".";
+import getOffering from ".";
 import { GetOfferingRequest, GetOfferingResponse } from "./types";
 
 jest.mock("axios");
@@ -36,7 +36,7 @@ describe("/getOffering endpoint", () => {
       ],
     };
     mockedAxios.post.mockResolvedValue({ data: response });
-    const mockedResponse = await getAllTrades(payload);
+    const mockedResponse = await getOffering(payload);
     expect(mockedResponse).toEqual(response);
   });
 });

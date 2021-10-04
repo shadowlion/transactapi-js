@@ -2,8 +2,8 @@ import { baseApi } from "../base";
 import { GetOfferingRequest, GetOfferingResponse } from "./types";
 
 /**
- * This method is used to get all the details of an offering.
- * The Offering ID is required to get the information.
+ * This method is used to get all the details of an offering. The Offering ID
+ * is required to get the information.
  * @link https://api.norcapsecurities.com/admin_v3/documentation?mid=MTY4
  * @param {string} clientID - Transact API Client ID
  * @param {string} clientID - Transact API Developer Key
