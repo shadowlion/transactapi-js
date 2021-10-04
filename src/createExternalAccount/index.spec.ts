@@ -10,7 +10,7 @@ jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("/createExternalAccount endpoint", () => {
-  test("successful creation of external account", async () => {
+  test("external account creation successful", async () => {
     const payload: CreateExternalAccountRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",

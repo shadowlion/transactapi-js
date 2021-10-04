@@ -6,7 +6,7 @@ jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("/getAllTrades endpoint", () => {
-  test("account exists", async () => {
+  test("trades exists", async () => {
     const payload: GetAllTradesRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",

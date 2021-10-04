@@ -6,7 +6,7 @@ jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("/ccFundMove", () => {
-  test("account exists", async () => {
+  test("fund moving from credit card account successful", async () => {
     const payload: CcFundMoveRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperapikey",
