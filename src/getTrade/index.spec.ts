@@ -19,7 +19,7 @@ describe("/getTrade endpoint", () => {
       partyDetails: [
         {
           id: "787508",
-          developerAPIKey: "MyG0RJZUhdP7wkZXi5NvSCV47OjYGvkg3I7",
+          developerAPIKey: "somedeveloperkey",
           offeringId: "35610",
           accountId: "A35513",
           partyId: "P82510",
@@ -64,7 +64,7 @@ describe("/getTrade endpoint", () => {
       partyDetails: [
         {
           id: "787508",
-          developerAPIKey: "MyG0RJZUhdP7wkZXi5NvSCV47OjYGvkg3I7",
+          developerAPIKey: "somedeveloperkey",
           offeringId: "35610",
           accountId: "A35513",
           partyId: "P82510",
@@ -91,7 +91,7 @@ describe("/getTrade endpoint", () => {
         },
         {
           id: "787508",
-          developerAPIKey: "MyG0RJZUhdP7wkZXi5NvSCV47OjYGvkg3I7",
+          developerAPIKey: "somedeveloperkey",
           offeringId: "35610",
           accountId: "A35513",
           partyId: "P82510",
@@ -118,7 +118,7 @@ describe("/getTrade endpoint", () => {
         },
         {
           id: "787508",
-          developerAPIKey: "MyG0RJZUhdP7wkZXi5NvSCV47OjYGvkg3I7",
+          developerAPIKey: "somedeveloperkey",
           offeringId: "35610",
           accountId: "A35513",
           partyId: "P82510",
@@ -145,7 +145,7 @@ describe("/getTrade endpoint", () => {
         },
         {
           id: "787508",
-          developerAPIKey: "MyG0RJZUhdP7wkZXi5NvSCV47OjYGvkg3I7",
+          developerAPIKey: "somedeveloperkey",
           offeringId: "35610",
           accountId: "A35513",
           partyId: "P82510",
