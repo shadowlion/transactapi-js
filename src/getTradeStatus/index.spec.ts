@@ -11,21 +11,21 @@ describe("/getTradeStatus endpoint", () => {
     const payload: GetTradeStatusRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
-      tradeId: "141103099",
+      tradeId: "sometradeid",
     };
     const response: GetTradeStatusResponse = {
       statusCode: "101",
       statusDesc: "Ok",
       tradeDetails: [
         {
-          id: "787594",
+          id: "555555",
           developerAPIKey: "somedeveloperkey",
-          offeringId: "52675",
-          accountId: "A11501",
-          partyId: "P56836",
+          offeringId: "12345",
+          accountId: "A12345",
+          partyId: "P12345",
           party_type: "",
           escrowId: null,
-          orderId: "141103099",
+          orderId: "sometradeid",
           transactionType: "WIRE",
           totalAmount: "12000.000000",
           totalShares: "120.000000",
