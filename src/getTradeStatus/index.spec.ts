@@ -19,7 +19,7 @@ describe("/getTradeStatus endpoint", () => {
       tradeDetails: [
         {
           id: "787594",
-          developerAPIKey: "U4Msub8Kn7tkjUJ3Dv4F7kGOKyC8NAdRIjC",
+          developerAPIKey: "somedeveloperkey",
           offeringId: "52675",
           accountId: "A11501",
           partyId: "P56836",
