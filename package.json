@@ -16,7 +16,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "axios": "^0.22.0"
+    "axios": "^0.22.0",
+    "form-data": "^4.0.0"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",

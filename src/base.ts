@@ -1,5 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
+export const BASE_URL = "https://api.norcapsecurities.com/tapiv3/index.php/v3/";
+
 /**
  * Base API call to Transact API
  * @param endpoint API endpoint, referenced from documentation
@@ -11,9 +13,8 @@ export async function baseApi<Payload, Response>(
   payload: Payload,
 ): Promise<Response> {
   try {
-    const baseUrl = "https://api.norcapsecurities.com/tapiv3/index.php/v3/";
     const res: AxiosResponse<Response> = await axios.post(
-      baseUrl + endpoint,
+      BASE_URL + endpoint,
       payload,
     );
     return res.data;
