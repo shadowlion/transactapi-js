@@ -7,3 +7,4 @@ export { default as getAccount } from "./getAccount";
 export { default as getAllTrades } from "./getAllTrades";
 export { default as getOffering } from "./getOffering";
 export { default as getParty } from "./getParty";
+export { default as updateCreditCard } from "./updateCreditCard";
