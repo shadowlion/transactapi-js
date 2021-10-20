@@ -35,7 +35,7 @@ export default async function ({
       transactionType,
       transactionUnits,
     };
-    return await baseApi("getAccount", payload);
+    return await baseApi("POST", "getAccount", payload);
   } catch (error) {
     throw new Error(error.message);
   }

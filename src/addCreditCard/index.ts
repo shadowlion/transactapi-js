@@ -39,7 +39,7 @@ export default async function ({
       cardType,
       createdIpAddress: "69.61.177.110",
     };
-    return await baseApi("addCreditCard", payload);
+    return await baseApi("POST", "addCreditCard", payload);
   } catch (error) {
     throw new Error(error.message);
   }

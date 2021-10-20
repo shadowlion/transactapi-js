@@ -26,7 +26,7 @@ export default async function ({
       accountId,
       tradeId,
     };
-    return await baseApi("getTrade", payload);
+    return await baseApi("POST", "getTrade", payload);
   } catch (error) {
     throw new Error(error.message);
   }

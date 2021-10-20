@@ -23,7 +23,7 @@ export default async function ({
       developerAPIKey,
       offeringId,
     };
-    return await baseApi("getOffering", payload);
+    return await baseApi("POST", "getOffering", payload);
   } catch (error) {
     throw new Error(error.message);
   }

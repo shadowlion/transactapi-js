@@ -23,7 +23,7 @@ export default async function ({
       developerAPIKey,
       tradeId,
     };
-    return await baseApi("getTradeStatus", payload);
+    return await baseApi("POST", "getTradeStatus", payload);
   } catch (error) {
     throw new Error(error.message);
   }

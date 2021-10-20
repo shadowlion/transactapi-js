@@ -22,7 +22,7 @@ export default async function ({
       developerAPIKey,
       partyId,
     };
-    return await baseApi("performKycAml", payload);
+    return await baseApi("POST", "performKycAml", payload);
   } catch (error) {
     throw new Error(error.message);
   }

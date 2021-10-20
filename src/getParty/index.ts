@@ -24,7 +24,7 @@ export default async function ({
       developerAPIKey,
       partyId,
     };
-    return await baseApi("getParty", payload);
+    return await baseApi("POST", "getParty", payload);
   } catch (error) {
     throw new Error(error.message);
   }

@@ -37,7 +37,7 @@ export default async function ({
       cvvNumber,
       cardType,
     };
-    return await baseApi("updateCreditCard", payload);
+    return await baseApi("POST", "updateCreditCard", payload);
   } catch (error) {
     throw new Error(error.message);
   }

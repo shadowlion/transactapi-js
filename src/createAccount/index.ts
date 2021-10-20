@@ -65,7 +65,7 @@ export default async function ({
     };
     if (type === AccountType.ENTITY) payload.entityType = entityType;
     if (streetAddress2) payload.streetAddress2 = streetAddress2;
-    return await baseApi("createAccount", payload);
+    return await baseApi("POST", "createAccount", payload);
   } catch (error) {
     throw new Error(error.message);
   }

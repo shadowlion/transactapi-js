@@ -48,7 +48,7 @@ export default async function ({
       ExtAccountnumber,
       accountType,
     };
-    return await baseApi("createExternalAccount", payload);
+    return await baseApi("POST", "createExternalAccount", payload);
   } catch (error) {
     throw new Error(error.message);
   }

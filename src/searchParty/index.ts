@@ -22,7 +22,7 @@ export default async function ({
       developerAPIKey,
       searchKeyword,
     };
-    return await baseApi("searchParty", payload);
+    return await baseApi("POST", "searchParty", payload);
   } catch (error) {
     throw new Error(error.message);
   }

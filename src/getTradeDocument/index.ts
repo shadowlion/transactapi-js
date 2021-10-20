@@ -22,7 +22,7 @@ export default async function ({
       developerAPIKey,
       tradeId,
     };
-    return await baseApi("getTradeDocument", payload);
+    return await baseApi("POST", "getTradeDocument", payload);
   } catch (error) {
     throw new Error(error.message);
   }

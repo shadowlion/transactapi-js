@@ -45,7 +45,7 @@ export default async function ({
       description,
       checkNumber,
     };
-    return await baseApi("externalFundMove", payload);
+    return await baseApi("POST", "externalFundMove", payload);
   } catch (error) {
     throw new Error(error.message);
   }

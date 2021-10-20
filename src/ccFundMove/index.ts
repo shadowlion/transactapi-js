@@ -26,7 +26,7 @@ export default async function ({
       tradeId,
       createdIpAddress: "69.61.177.110",
     };
-    return await baseApi("ccFundMove", payload);
+    return await baseApi("POST", "ccFundMove", payload);
   } catch (error) {
     throw new Error(error.message);
   }
