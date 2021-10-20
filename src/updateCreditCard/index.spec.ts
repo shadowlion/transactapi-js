@@ -21,7 +21,7 @@ describe("/updateCreditCard endpoint", () => {
     const response: UpdateCreditCardResponse = {
       statusCode: "101",
       statusDesc: "Ok",
-      creditCardDetails: "credit card updated."
+      creditCardDetails: "credit card updated.",
     };
     mockedAxios.post.mockResolvedValue({ data: response });
     const mockedResponse = await updateCreditCard(payload);

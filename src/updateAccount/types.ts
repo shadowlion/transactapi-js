@@ -30,13 +30,13 @@ export interface UpdateAccountRequest {
 }
 
 export interface UpdateAccountResponse {
-  statusCode:     string;
-  statusDesc:     string;
+  statusCode: string;
+  statusDesc: string;
   accountDetails: AccountDetail[];
 }
 
 export interface AccountDetail {
-  accountId:        string;
+  accountId: string;
   suitabilityScore: string;
-  approvalStatus:   string;
+  approvalStatus: string;
 }

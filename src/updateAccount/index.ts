@@ -43,8 +43,7 @@ export default async function ({
   accountId,
   accountRegistration,
   ...other
-}: UpdateAccountRequest,
-): Promise<UpdateAccountResponse> {
+}: UpdateAccountRequest): Promise<UpdateAccountResponse> {
   try {
     const payload: UpdateAccountRequest = {
       clientID,
