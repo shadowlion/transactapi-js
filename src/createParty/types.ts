@@ -25,7 +25,7 @@ export interface CreatePartyResponse {
 }
 
 interface PartyDetail {
-  partyId: integer;
+  partyId: string;
   KYCstatus: string;
   AMLstatus: string;
 }

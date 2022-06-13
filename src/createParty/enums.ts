@@ -1,5 +1,5 @@
 export const enum Domicile {
-  USCITIZEN = "U.S. Citizen",
-  USRESIDENT = "U.S. Resident",
-  NONRESIDENT = "non-resident",
+  US_CITIZEN = "U.S. Citizen",
+  US_RESIDENT = "U.S. Resident",
+  NON_RESIDENT = "non-resident",
 }
