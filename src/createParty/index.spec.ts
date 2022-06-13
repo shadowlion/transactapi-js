@@ -13,7 +13,7 @@ describe("/createParty endpoint", () => {
     const payload: CreatePartyRequest = {
       clientID: "someclientid",
       developerAPIKey: "somedeveloperkey",
-      domicile: Domicile.USCITIZEN,
+      domicile: Domicile.US_CITIZEN,
       firstName: "Bill",
       lastName: "Brown",
       dob: "01-03-1950",
