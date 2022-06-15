@@ -1,6 +1,6 @@
 {
   "name": "transactapi-js",
-  "version": "0.0.11",
+  "version": "0.0.20",
   "description": "Javascript SDK for Transact API services.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -40,7 +40,7 @@
   "keywords": [
     "typescript"
   ],
-  "author": "Justin Chiou <chiou.kai@gmail.com>",
+  "author": "Justin Chiou <justin@wunderfund.co>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shadowlion/transactapi-js/issues"
