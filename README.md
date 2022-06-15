@@ -91,5 +91,9 @@ Take a look at the [documentation](transactapi-docs), find which endpoint hasn't
    - `/src/ENDPOINT/types.ts` - types file just for this specific endpoint
    - `/src/ENDPOINT/enums.ts` - enums file (optional)
 
+4. Once all the lints/tests pass locally, edit `package.json` and bump the version number (e.g. 0.0.1 -> 0.0.2). 
+
+5. Await the PR to be approved!
+
 [ncps]: https://www.northcapital.com/
 [transactapi-docs]: https://api.norcapsecurities.com/admin_v3/documentation
