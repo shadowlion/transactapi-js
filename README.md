@@ -1,8 +1,8 @@
 # TransactAPI Javascript SDK
 
-This is a library javascript wrapper functions for endpoints as specified in the [documentation](https://api.norcapsecurities.com/admin_v3/documentation) of TransactAPI, provided by [North Capital Private Securities](https://www.northcapital.com/) (NCPS).
-
 TransactAPI is a RESTful API that enables broker-dealers, funding platforms, and issuers to conduct online private securities offerings. Our standards-based API toolkit can be quickly and easily integrated with proprietary platforms, saving development time and money. Issuers, intermediaries, and advisors can benefit from TransactAPI’s straight-through processing of private placement transactions, which enables higher transaction volumes, expands access to investors, and reduces processing times.
+
+This is a javascript API wrapper that functions for endpoints as specified in the [documentation](https://api.norcapsecurities.com/documentation) of Transact API, provided by [North Capital Private Securities](https://www.northcapital.com/) (NCPS).
 
 ## Author's Notes
 
@@ -10,11 +10,9 @@ This is in no way an official SDK provided by the company itself. However, since
 
 For those who wish to help during Hacktoberfest (or any time else!), please submit a PR. Check the [contribution section](CONTRIBUTE.md) for more information.
 
-## Setup
+## Development
 
-You will need to acquire both a `clientID` and `developerAPIKey` from NCPS - this happens when you subscribe to them as a customer of their services.
-
-Each API endpoint will require both in order to get the response to fully work.
+You will need to acquire both a `clientID` and `developerAPIKey` from NCPS in order to use this for actual financial services - this happens when you subscribe to them as a customer of their services. However, you DO NOT need a `clientID` nor `developerAPIKey` from NCPS to develop this library, as we use mocks from their documentation to test each endpoint.
 
 ## Installation
 
