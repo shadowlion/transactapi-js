@@ -1,6 +1,6 @@
 # TransactAPI Javascript SDK
 
-This is a library javascript wrapper functions for endpoints as specified in the [documentation](transactapi-docs) of Transact API, provided by [North Capital Private Securities](ncps) (NCPS).
+This is a library javascript wrapper functions for endpoints as specified in the [documentation](https://api.norcapsecurities.com/admin_v3/documentation) of TransactAPI, provided by [North Capital Private Securities](https://www.northcapital.com/) (NCPS).
 
 TransactAPI is a RESTful API that enables broker-dealers, funding platforms, and issuers to conduct online private securities offerings. Our standards-based API toolkit can be quickly and easily integrated with proprietary platforms, saving development time and money. Issuers, intermediaries, and advisors can benefit from TransactAPI’s straight-through processing of private placement transactions, which enables higher transaction volumes, expands access to investors, and reduces processing times.
 
@@ -8,7 +8,7 @@ TransactAPI is a RESTful API that enables broker-dealers, funding platforms, and
 
 This is in no way an official SDK provided by the company itself. However, since I use a lot of javascript in my daily work life, I figured I could create a library and share it with others in a more open-source format.
 
-For those who wish to help during Hacktoberfest (or any time else!), please submit a PR. Check the [contribution section](#how-to-contribute) for more information.
+For those who wish to help during Hacktoberfest (or any time else!), please submit a PR. Check the [contribution section](CONTRIBUTE.md) for more information.
 
 ## Setup
 
@@ -48,7 +48,7 @@ const transactapi = require("transactapi-js");
 // Javascript, ES6
 import getAccount from "transactapi-js/getAccount";
 
-async () => {
+(async () => {
   const payload = {
     clientID: "",
     developerAPIKey: "",
@@ -57,7 +57,7 @@ async () => {
   const account = await getAccount(payload);
   const name = account.accountName;
   console.log(name);
-};
+})();
 ```
 
 ```typescript
@@ -78,22 +78,4 @@ import getAccount, { GetAccountPayload } from "transactapi-js/getAccount";
 
 ## How to Contribute
 
-Take a look at the [documentation](transactapi-docs), find which endpoint hasn't been covered yet. Normally, you will want to do the following on github:
-
-1. Open an issue
-
-2. Open a pull request addressing the issue
-
-3. Create a folder in `/src` with the name of the `ENDPOINT`. Create the following files:
-
-   - `/src/ENDPOINT/index.ts` - function file to call the api endpoint
-   - `/src/ENDPOINT/index.spec.ts` - test file to mock the api calls
-   - `/src/ENDPOINT/types.ts` - types file just for this specific endpoint
-   - `/src/ENDPOINT/enums.ts` - enums file (optional)
-
-4. Once all the lints/tests pass locally, edit `package.json` and bump the version number (e.g. 0.0.1 -> 0.0.2). 
-
-5. Await the PR to be approved!
-
-[ncps]: https://www.northcapital.com/
-[transactapi-docs]: https://api.norcapsecurities.com/admin_v3/documentation
+Please use the [CONTRIBUTE.md](CONTRIBUTE.md) file to learn more.
